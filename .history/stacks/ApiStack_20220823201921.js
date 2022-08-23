@@ -11,7 +11,7 @@ export function ApiStack({ stack, app }) {
       function: {
         permissions: [table],
         environment: {
-          TABLE_NAME: table.tableName,STRIPE_SECRET_KEY: process.env.sk_test_51La0d2IyGgBl6xBZ7fM6YGouzErpjcvva1NTlljxx4YHMF8NG8yIbexCvZ2A7955BePrrae82veLZNTaTW8XVuK100bC9yNwdB,
+          TABLE_NAME: table.tableName,STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
         },
       },
     },
@@ -21,8 +21,6 @@ export function ApiStack({ stack, app }) {
       "GET /notes": "functions/list.main",
       "PUT /notes/{id}": "functions/update.main",
       "DELETE /notes/{id}": "functions/delete.main",
-      "POST /billing": "functions/billing.main",
-
 
 
 
