@@ -33,7 +33,7 @@ export function ApiStack({ stack, app }) {
 
   // Show the API endpoint in the output
   stack.addOutputs({
-    ApiEndpoint: api.customDomainUrl || api.url,
+    ApiEndpoint: api.url,
   });
 
   // Return the API resource
