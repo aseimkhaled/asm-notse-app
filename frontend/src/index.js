@@ -8,7 +8,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Amplify } from 'aws-amplify';
 import config from './config';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 Amplify.configure({
   Auth: {
     mandatorySignIn: true,
@@ -32,6 +31,7 @@ Amplify.configure({
     ]
   }
 });
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
